@@ -23,7 +23,7 @@ app.use(bodyParser())
 app.use(mount(controllerRoot, xbatis.routes()))
 
 // 开始服务监听
-app.listen(port, function() {
-    log.info(`XBatis服务已启动,执行环境:${process.env.NODE_ENV},端口:${port}...`)
-    log.info(`[POST]http://host:${port}/xbatis/MODEL_NAME/METHOD_NAME`)
-})
+app.listen(port)
+
+log.info(`XBatis服务已启动,执行环境:${process.env.NODE_ENV},端口:${port}...`)
+log.info(`[POST]http://host:${port}/xbatis/MODEL_NAME/METHOD_NAME`)
