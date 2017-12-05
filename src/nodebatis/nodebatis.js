@@ -1,6 +1,6 @@
 var NodeBatis = require('nodebatis')
 var config = require('config')
-var dbConfig = config.get('db')
+var dbConfig = config.db
 const Types = NodeBatis.Types
 
 const nodebatis = new NodeBatis('./src/yaml', {
