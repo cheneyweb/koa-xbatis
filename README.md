@@ -57,16 +57,6 @@ RESTful规则
 		findByUsername:	
     		- select * from user where username = :username
 
-框架整合（开源力量）
->
-    "config": "^1.28.1",
-    "koa": "^2.4.1",
-    "koa-bodyparser": "^4.2.0",
-    "koa-mount": "^3.0.0",
-    "koa-router": "^7.3.0",
-    "nodebatis": "^2.1.3",
-    "tracer": "^0.8.11"
-
 帮助联系
 >
 	作者:cheneyxu
@@ -77,3 +67,4 @@ RESTful规则
 >
 	2017.04.29:无后端理念确认，1.0版本推出
 	2017.12.05:精简更新所有依赖包
+	2017.12.12:更新koa-body
