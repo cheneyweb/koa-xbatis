@@ -4,7 +4,7 @@ const port = config.server.port
 const controllerRoot = config.server.controllerRoot
 // 应用服务
 const Koa = require('koa')
-const bodyParser = require('koa-bodyparser')
+const bodyBody = require('koa-body')
 const mount = require('koa-mount')
 const nodebatis = require(__dirname + '/src/nodebatis/nodebatis.js')
 const xbatis = require(__dirname + '/xbatis_modules/koa-xbatis/index.js')
@@ -14,7 +14,7 @@ const log = require('tracer').colorConsole({ level: config.log.level })
 // 初始化应用服务器
 const app = new Koa()
 // 入参JSON解析
-app.use(bodyParser())
+app.use(bodyBody())
 
 // 使用路由统一控制
 // 引入koa-xbatis中间件
