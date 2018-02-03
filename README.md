@@ -17,9 +17,7 @@
 
 	2, const xbatis = require('koa-xbatis')
 
-	3, xbatis.initConnect(nodebatis)
-
-	4, app.use(mount(controllerRoot, xbatis.routes()))
+	3, xbatis.init(app, nodebatis, options)
 
 	yaml文件夹路径默认是 {project}/src/yaml/
 
@@ -68,3 +66,5 @@ RESTful规则
 	2017.04.29:无后端理念确认，1.0版本推出
 	2017.12.05:精简更新所有依赖包
 	2017.12.12:更新koa-body
+	2018.02.03:更新所有依赖，增加支持多层中间层业务流转，全新1.0版本发布
+

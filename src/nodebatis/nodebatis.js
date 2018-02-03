@@ -3,7 +3,7 @@ var config = require('config')
 var dbConfig = config.db
 const Types = NodeBatis.Types
 
-const nodebatis = new NodeBatis('./src/yaml', {
+const nodebatis = new NodeBatis(`${process.cwd()}${config.server.mapperDir || '/src/yaml/'}`, {
     debug: true,
     dialect: 'mysql',
     host: dbConfig.host,

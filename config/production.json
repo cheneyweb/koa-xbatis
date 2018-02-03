@@ -10,7 +10,9 @@
         "level": "warn"
     },
     "server": {
-        "port": 8082,
-        "controllerRoot": "/xbatis"
+        "port": 3636,
+        "xbatisRoot": "/xbatis",
+        "mapperDir": "/src/yaml/",
+        "middlewareDir": "/src/middleware/"
     }
 }

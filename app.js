@@ -1,11 +1,9 @@
 // 系统设置
 const config = require('config')
 const port = config.server.port
-const controllerRoot = config.server.controllerRoot
 // 应用服务
 const Koa = require('koa')
 const bodyBody = require('koa-body')
-const mount = require('koa-mount')
 const nodebatis = require(__dirname + '/src/nodebatis/nodebatis.js')
 const xbatis = require(__dirname + '/xbatis_modules/koa-xbatis/index.js')
 // 日志服务
@@ -16,10 +14,8 @@ const app = new Koa()
 // 入参JSON解析
 app.use(bodyBody())
 
-// 使用路由统一控制
-// 引入koa-xbatis中间件
-xbatis.initConnect(nodebatis)   // 初始化mysql连接
-app.use(mount(controllerRoot, xbatis.routes()))
+// 加载koa-xbatis中间件
+xbatis.init(app, nodebatis, config.server)   // 初始化mysql连接
 
 // 开始服务监听
 app.listen(port)
