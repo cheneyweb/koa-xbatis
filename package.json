@@ -9,12 +9,12 @@
   "author": "cheneyxu",
   "license": "ISC",
   "dependencies": {
-    "config": "^1.29.2",
-    "koa": "^2.4.1",
-    "koa-body": "^2.5.0",
-    "koa-mount": "^3.0.0",
+    "config": "^2.0.1",
+    "koa": "^2.6.1",
+    "koa-body": "^4.0.4",
+    "koa-mount": "^4.0.0",
     "koa-router": "^7.4.0",
-    "nodebatis": "^2.2.1",
-    "tracer": "^0.8.11"
+    "nodebatis": "^2.3.3",
+    "tracer": "^0.9.2"
   }
 }
